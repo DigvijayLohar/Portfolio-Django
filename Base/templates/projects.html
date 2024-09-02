@@ -1,0 +1,52 @@
+{% extends "master.html" %}
+{% load static %}
+{% block content %}
+<section class="ftco-section ftco-project" id="projects-section">
+    <div class="container fadeInUp ftco-animated">
+        <div class="row justify-content-center pb-3">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h1 class="sub-title">Projects</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="work">
+                    <img src="{% static 'images/project-2.jpg' %}">
+                    <div class="layer">
+                        <h3>Cloud-based Skin Disease Detection using Machine Learning</h3>
+                        <p>Developed a cloud-based application that leverages machine learning algorithms to accurately
+                            detect and classify various skin diseases from medical images.</p>
+                        <a href="https://github.com/DigvijayLohar/Cloud-based-skin-disease-detection-using-machine-learnig.git"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="work">
+                    <img src="{% static 'images/project-4.jpg' %}">
+                    <div class="layer">
+                        <h3>Automating Bank Check Extraction from Scanned PDFs</h3>
+                        <p>Developed a system to automate the extraction of key information from bank checks within
+                            scanned PDF documents.</p>
+
+                        <a href="https://github.com/Springboard-Internship-2024/Automating-Bank-Check-Extraction-from-Scanned-PDFs_May_2024.git"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="work">
+                    <img src="{% static 'images/work-3.png' %}">
+                    <div class="layer">
+                        <h3>Feane Fast Food Web</h3>
+                        <p>Designed and developed a responsive website for Feane, a fast-food restaurant. The website
+                            features an intuitive user interface for easy navigation and menu
+                            browsing.</p>
+
+                        <a href="https://github.com/DigvijayLohar/Restaurant-Web-Django.git"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,39 @@
+{% extends "master.html" %}
+{% load static %}
+{% block content %}
+<section id="certificates-section" class="certificates-section">
+    <div class="container fadeInUp ftco-animated">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-12 text-center">
+                <h1 class="sub-title">My Certificates</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card certificate-card">
+                    <img src="{% static 'images/nptel.png' %}" class="card-img-top certificate-img" alt="Certificate 1">
+                    <div class="card-body certificate-body">
+                        <h5 class="certificate-title">Python for Data-Science</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card certificate-card">
+                    <img src="{% static 'images/CrashCourse.png' %}" class="card-img-top certificate-img" alt="Certificate 2">
+                    <div class="card-body certificate-body">
+                        <h5 class="certificate-title">Crash Course on python</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card certificate-card">
+                    <img src="{% static 'images/Hackerrank.png' %}" class="card-img-top certificate-img" alt="Certificate 3">
+                    <div class="card-body certificate-body">
+                        <h5 class="certificate-title">Python Fundamentals</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

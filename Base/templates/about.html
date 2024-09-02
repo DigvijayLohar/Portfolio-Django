@@ -1,0 +1,58 @@
+{% extends "master.html" %}
+{% load static %}
+{% block content %}
+<section id="about-section" class="py-5">
+    <div class="container fadeInUp ftco-animated">
+        <!-- Row for Image and About Content -->
+        <div class="row align-items-center">
+            <!-- Image Column -->
+            <div class="col-md-5 mb-4 mb-md-0 about-col-1">
+                <img src="{% static 'images/20131044.jpg' %}" class="img-fluid rounded small-img">
+            </div>
+            <!-- About Content Column -->
+            <div class="col-md-7 fadeInUp ftco-animated">
+                <h1 class="sub-title">About Me</h1>
+                <p style="text-align: justify;">I am <b><span style="color:#ff004f">Digvijay</span></b> Lohar., a
+                    results-oriented and highly
+                    motivated IT professional
+                    with a <b style="color:#ff004f">B.Tech </b>in Computer Science and Engineering with First Class with
+                    Distinction, knowledgeable in
+                    automated systems, machine learning, and web development. Proficient in Python, SQL
+                    Completed internships and certifications in Python and front-end development.</p>
+                <div class="about-info">
+                    <ul class="list-unstyled">
+                        <li class="d-flex mb-2">
+                            <div class="col-3"><strong>Date of birth:</strong></div>
+                            <div class="col-6 text-start">May 23, 2002</div>
+                        </li>
+                        <li class="d-flex mb-2">
+                            <div class="col-3"><strong>Address:</strong></div>
+                            <div class="col-6 text-start">A/P MALHARPETH, MAHARASHTRA</div>
+                        </li>
+                        <li class="d-flex mb-2">
+                            <div class="col-3"><strong>Zip code:</strong></div>
+                            <div class="col-6 text-start">415205</div>
+                        </li>
+                        <li class="d-flex mb-2">
+                            <div class="col-3"><strong>Email:</strong></div>
+                            <div class="col-6 text-start">digvijaylohar007@gmail.com</div>
+                        </li>
+                        <li class="d-flex mb-2">
+                            <div class="col-3"><strong>Phone:</strong></div>
+                            <div class="col-6 text-start">+91-7277751007</div>
+                        </li>
+                    </ul>
+                    <div class="text-center col-md-5 fadeInUp ftco-animated">
+                        <a href="{% static 'Resume/CV3.pdf'%}" class="btn btn-primary py-2 px-2" download="">DOWNLOAD
+                            CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock content %}

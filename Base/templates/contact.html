@@ -1,0 +1,79 @@
+{% extends "master.html" %}
+{% load static %}
+{% block content %}
+<!-- Contact Section -->
+<section class="ftco-section ftco-no-pb" id="contact-section">
+    <div class="container fadeInUp ftco-animated">
+        <div class="row justify-content-center pb-2 mt-2">
+            <div class="col-md-10 heading-section text-center ftco-animate">
+                <h1 class="sub-title">Get in Touch</h1>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Contact Info -->
+
+
+            <!-- Contact Form -->
+            <div class="col-md-6 mt-3">
+                <form action="https://script.google.com/macros/s/AKfycbxF5UgANuJThFMikdBLAAtzLFlosWxJMbtionTBzlc8ur3ujXqw_zvo15xIv_iIo-dR/exec" method="post" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-4">Submit</button>
+                </form>
+            </div>
+
+            <div class="col-md-6 mb-4 text-center">
+                <div class="contact-info text-center">
+                    
+
+                    <!-- Social Media Icons -->
+                    <div class="social-media mt-4 mb-4 text-center">
+                        <a href="https://github.com/DigvijayLohar" class="social-icon" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i> <!-- Icon for GitHub -->
+                        </a>
+                        <a href="https://www.linkedin.com/in/digvijay-lohar-169230244/" class="social-icon" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i> <!-- Icon for LinkedIn -->
+                        </a>
+                        <a href="mailto:digvijaylohat007@gmail.com" class="social-icon" aria-label="Email">
+                            <i class="fas fa-envelope"></i> <!-- Icon for Email -->
+                        </a>
+                        <a href="https://wa.me/7277751007" class="social-icon" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i> <!-- Icon for WhatsApp -->
+                        </a>
+                        <a href="https://www.instagram.com/digya_lohar" class="social-icon" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i> <!-- Icon for Instagram -->
+                        </a>
+                    </div>
+                    
+                    <a href="{% static 'Resume/CV3.pdf'%}" class="btn btn-primary" download>Download
+                        CV</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- JavaScript to handle the form submission -->
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxF5UgANuJThFMikdBLAAtzLFlosWxJMbtionTBzlc8ur3ujXqw_zvo15xIv_iIo-dR/exec';
+    const form = document.forms['contact-form'];
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thank you! Your form has been submitted successfully."))
+            .then(() => { window.location.reload(); })
+            .catch(error => console.error('Error!', error.message));
+    });
+</script>
+{% endblock content %}
